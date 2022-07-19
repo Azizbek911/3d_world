@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: black;
+    overflow: hidden;
+    cursor: hidden;
+}      
+#mainDiv{
+    width: 500px;
+    height: 500px;
+    margin: 200px auto;
+    perspective: 800px;
+}  
+#boxDiv{
+    width: 500px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transform: translateZ(600px);
+}
+#boxDiv div{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+}
+
+#front{
+    transform: translateZ(250px) rotateY(180deg);
+}
+
+#back{
+    transform: translateZ(-250px);
+}
+#left{
+    transform: rotateY(90deg) translateX(-250px);
+    transform-origin: left;
+}
+#right{
+    transform: rotateY(-90deg) translateX(250px); 
+    transform-origin: right;
+}
+#top{
+    transform: rotateX(-90deg) translateY(-250px);
+    transform-origin: top;
+}
+#bottom{
+    transform: rotateX(90deg) translateY(250px);
+    transform-origin: bottom;
+}
